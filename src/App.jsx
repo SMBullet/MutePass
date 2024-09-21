@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash, FaCopy, FaMoon, FaSun } from 'react-icons/fa';
 import { FiKey } from 'react-icons/fi'; // MutePass logo placeholder
+import { FaGithub } from "react-icons/fa";
 
 function App() {
   const [password, setPassword] = useState('');
@@ -120,8 +121,8 @@ function App() {
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-800'} flex flex-col font-sans transition duration-300`}>
       <header className={`py-6 shadow-md flex items-center justify-between px-10 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} transition`}>
         <div className="flex items-center">
-          <FiKey className={`text-3xl ${darkMode ? 'text-green-400' : 'text-green-600'} mr-3`} />
-          <h1 className={`text-4xl font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>MutePass</h1>
+          <img src="../public/logo.png" alt="MutePass Logo" className={`w-12 h-12 ${darkMode ? 'text-green-400' : 'text-green-600'} mr-3`} />
+          <h1 className={`text-4xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} transition`}>MutePass</h1>
         </div>
         <button onClick={toggleDarkMode} className="text-2xl">
           {darkMode ? <FaSun /> : <FaMoon />}
@@ -291,9 +292,21 @@ function App() {
         </section>
       </main>
 
-      <footer className={`py-6 text-center text-lg ${darkMode ? 'bg-gray-800 text-gray-100' : 'bg-gray-100 text-gray-600'}`}>
-        <p>© 2024 MutePass</p>
+      <footer className={`py-8 text-center ${darkMode ? 'bg-gray-800 border-t border-gray-700' : 'bg-gray-100 border-t border-gray-200'} transition`}>
+        <div className="flex items-center justify-center space-x-4 mb-4">
+          <a href="https://github.com/SMBullet/MutePass" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-white hover:text-green-400' : 'text-gray-700 hover:text-gray-900'} transition text-3xl`}>
+            <FaGithub />
+          </a>
+          <a href="https://github.com/SMBullet/MutePass" target="_blank" rel="noopener noreferrer" className={`text-sm ${darkMode ? 'text-gray-300 hover:text-green-400' : 'text-gray-600 hover:text-gray-900'} transition`}>
+            https://github.com/SMBullet/MutePass
+          </a>
+        </div>
+        <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'} transition`}>
+          © 2024 MutePass. All rights reserved.
+        </p>
       </footer>
+
+
     </div>
   );
 }
