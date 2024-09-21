@@ -121,7 +121,7 @@ function App() {
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-800'} flex flex-col font-sans transition duration-300`}>
       <header className={`py-6 shadow-md flex items-center justify-between px-10 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} transition`}>
         <div className="flex items-center">
-          <FiKey className={text-3xl ${darkMode ? 'text-green-400' : 'text-green-600'} mr-3} />
+          <FiKey className={`text-3xl ${darkMode ? 'text-green-400' : 'text-green-600'} mr-3`} />
           <h1 className={`text-4xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} transition`}>MutePass</h1>
         </div>
         <button onClick={toggleDarkMode} className="text-2xl">
